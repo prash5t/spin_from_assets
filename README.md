@@ -18,6 +18,9 @@ Add the package to your `pubspec.yaml`:
 ```yaml
 dependencies:
   spin_from_assets: ^1.0.0
+
+repository: https://github.com/prash5t/spin_from_assets
+homepage: https://github.com/prash5t/spin_from_assets
 ```
 
 Run:
