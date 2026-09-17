@@ -19,6 +19,11 @@
 - URL extension detection now ignores query strings and fragments
   (e.g. `.../wheel.png?v=2`).
 
+### Fixed
+
+- The `LICENSE` file now contains the full MIT license text (it previously held
+  only the title), so the license is correctly recognized.
+
 ### Removed
 
 - The internal `String` rendering extension (`toSvg` / `toImage` / `toLottie` /
