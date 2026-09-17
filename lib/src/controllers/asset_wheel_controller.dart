@@ -1,6 +1,13 @@
 part of '../../spin_from_assets.dart';
 
+/// Drives the wheel's rotation.
+///
+/// A [ValueNotifier] whose value is the current wheel rotation in radians. The
+/// widget creates and owns one internally; you normally interact with the wheel
+/// through [AssetWheelWidget.onSpinButtonPressed] rather than using this class
+/// directly.
 class AssetWheelController extends ValueNotifier<double> {
+  /// Creates a controller with the wheel at rest (rotation `0`).
   AssetWheelController() : super(0.0) {
     _ticker = Ticker(_onTick);
   }
@@ -13,12 +20,17 @@ class AssetWheelController extends ValueNotifier<double> {
   double? _startAngle;
   double? _totalDistance;
   double _duration = 0.0;
-  // late AnimationController _animationController;
-  // late CurvedAnimation _curvedAnimation;
 
+  /// Whether the wheel is currently animating toward a target.
   bool get isSpinning => _isSpinning;
+
+  /// Whether the most recent spin has finished (used to fire selection).
   bool get hasCompletedSpin => _hasCompletedSpin;
 
+  /// Spins the wheel to [targetAngle] (radians) over [duration] seconds.
+  ///
+  /// Ignored while a spin is already in progress. Extra full rotations are added
+  /// so the wheel always turns clockwise with a lively number of spins.
   void spinToTarget(double targetAngle, double duration) {
     if (_isSpinning) return;
 

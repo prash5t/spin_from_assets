@@ -9,4 +9,11 @@ class AssetPathConstants {
   static const String indicator = 'assets/images/indicator.png';
   static const String lottieWheel = 'assets/lottie/wheel.json';
   static const String fidgetSpinner = 'assets/svg/fidget-spinner.svg';
+
+  /// Same artwork as [wheel8] / [indicator], but served over the network to
+  /// demonstrate URL support (these are this repo's own raw GitHub assets).
+  static const String _rawBase =
+      'https://raw.githubusercontent.com/prash5t/spin_from_assets/main/example/assets';
+  static const String networkWheel = '$_rawBase/images/wheel_8.png';
+  static const String networkIndicator = '$_rawBase/images/indicator.png';
 }
