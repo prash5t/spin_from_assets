@@ -1,8 +1,20 @@
 name: spin_from_assets
-description: "Build spinning wheels with your business logic and designer's assets"
-version: 1.0.0
+description: "Spinning wheel widget built from your own image, SVG or Lottie assets — loaded from local files or network URLs."
+version: 1.1.0
 homepage: https://github.com/prash5t/spin_from_assets
 repository: https://github.com/prash5t/spin_from_assets
+issue_tracker: https://github.com/prash5t/spin_from_assets/issues
+
+topics:
+  - wheel
+  - spinner
+  - animation
+  - lottie
+  - svg
+
+screenshots:
+  - description: "A spinning wheel and indicator built from custom assets."
+    path: screenshots/cover.jpg
 
 environment:
   sdk: ^3.5.2
@@ -11,13 +23,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  lottie: ^3.2.0
-  flutter_svg: ^2.0.16
+  lottie: ^3.3.0
+  flutter_svg: ^2.3.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+  flutter_lints: ^6.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
